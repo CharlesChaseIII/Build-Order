@@ -10,7 +10,12 @@ public class BuildOrderApplication {
         
         BuildOrderImpl buildOrd = new BuildOrderImpl();
         
-        System.out.println(buildOrd.arrangeBuildOrder(projects,dependencies));
+        try {
+        	System.out.println(buildOrd.arrangeBuildOrder
+        			(projects,dependencies));
+        } catch(Exception e) {
+        	System.out.println("index out of bound error");
+        }
 	}
 
 }
